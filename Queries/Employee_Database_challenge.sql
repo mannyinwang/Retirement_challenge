@@ -30,7 +30,7 @@
 -- -- Employees born between 1965-1-1 and 1965-12-31
 
 -- SELECT DISTINCT ON (e.emp_no) e.emp_no, e.first_name, e.last_name, e.birth_date, de.from_date, de.to_date, te.titles
--- -- INTO retirement_titles
+-- -- INTO mentorship eligibility
 -- FROM employees as e
 -- INNER JOIN dept_employee as de
 -- 	ON de.emp_no = e.emp_no
@@ -41,6 +41,20 @@
 -- ORDER BY e.emp_no ASC, te.titles ASC
 
 
+-- select count(emp_no), titles
+-- -- into mentorship_count
+-- from mentorship_eligibility
+-- group by titles 
+-- order by count desc
 
+
+-- -- Getting total count of mentorship eligible staff members
+-- select count(emp_no)
+-- from mentorship_eligibility
+
+
+-- -- Getting total count of retiring staff members
+-- select count(emp_no)
+-- from unique_titles
 
 
